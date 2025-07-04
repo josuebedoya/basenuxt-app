@@ -43,10 +43,6 @@ const {data: products } = await useAsyncData('products',
 )
 
 
-
-
-
-
 definePageMeta({
   middleware: 'auth'
 })

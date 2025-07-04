@@ -46,6 +46,14 @@ export default {
       "confirmPassword": "Confirmar Contraseña"
     }
   },
+  "iblog": {
+    "categories": {
+      "title": "Categories",
+    },
+    "posts": {
+      "title": "Posts",
+    }
+  },
   "icommerce": {
     "cart": {
       "continue": "Continuar",
@@ -95,12 +103,12 @@ export default {
         "showing": 'Mostrando',
         "pleaseAwait": "Espera un momento..."
       }
-    }, 
+    },
     "form": {
       "rules": {
-        "requiredField":"", 
+        "requiredField": "",
       },
-      "email": "Correo", 
+      "email": "Correo",
 
 
     }

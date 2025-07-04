@@ -47,6 +47,14 @@ export default {
     }
 
   },
+  "iblog": {
+    "categories": {
+      "title": "Categorias",
+    },
+    "posts": {
+      "title": "Posts",
+    }
+  },
   "icommerce": {
     "cart": {
       "continue": "Continue",
