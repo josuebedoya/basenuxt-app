@@ -3,7 +3,7 @@ const layout = 'iblog';
 const pages = [
     {
         name: 'iblog,categories',
-        path: '/iblog/c/',
+        path: '/iblog/c/:slug?',
         page: 'pages/categories/index.vue',
 
         meta: {
@@ -14,12 +14,12 @@ const pages = [
     },
     {
         name: 'iblog.posts',
-        path: '/iblog/p/:slug',
+        path: '/iblog/p/:slug?',
         page: 'pages/posts/index.vue',
 
         meta: {
             layout,
-            title: 'iblog.categories.title',
+            title: 'iblog.posts.title',
             breadcrumb: ':slug',
         }
     }

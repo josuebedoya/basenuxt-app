@@ -52,6 +52,7 @@ export default {
     },
     "posts": {
       "title": "Posts",
+      "button": "Leer más",
     }
   },
   "icommerce": {

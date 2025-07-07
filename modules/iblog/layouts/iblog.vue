@@ -18,6 +18,6 @@
 </template>
 
 <script setup>
-import HeaderApp from '~/modules/iblog/components/header';
-import FooterApp from '../modules/iblog/components/footer';
+import HeaderApp from '../components/header/index.vue';
+import FooterApp from '../components/footer/index.vue';
 </script>

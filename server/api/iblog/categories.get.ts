@@ -3,7 +3,7 @@ import apiRoutes from "~/modules/iblog/config/apiRoutes";
 export default defineCachedEventHandler(async (e) => {
 
         const config = useRuntimeConfig()
-        const apiRoute = `${config.public.apiRoute}/api`
+        const apiRoute = `${config.public.apiRoute}`
 
         let api = `${apiRoute}${apiRoutes.categories}`
 
