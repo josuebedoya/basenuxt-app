@@ -14,7 +14,7 @@
       >
 
         <q-item-section v-if="category.title">
-          <nuxt-link :to="`/iblog/c/${category.slug}`">
+          <nuxt-link :to="`/b/${category.slug}`">
             {{ category.title }}
           </nuxt-link>
         </q-item-section>

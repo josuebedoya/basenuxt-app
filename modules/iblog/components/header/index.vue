@@ -6,7 +6,7 @@ const items = [
   },
   {
     name: 'Categorias',
-    to: '/iblog/c'
+    to: '/b/'
   }
 ]
 </script>

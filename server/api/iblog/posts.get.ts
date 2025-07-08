@@ -29,9 +29,9 @@ export default defineCachedEventHandler(async (event) => {
         return data;
     }, {
         group: "iblog",
-        name: "iblog_posts_by_category",
+        name: "posts_by_category",
         maxAge: 60 * 2, // 2 minutes
 
-        getKey: (event) => `category${getQuery(event)?.categoryId || ''}`
+        getKey: (event) => `category_${getQuery(event)?.categoryId || ''}`
     }
 )

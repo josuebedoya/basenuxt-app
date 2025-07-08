@@ -298,7 +298,7 @@ const navItems = ref([
     ]
    },
   { label: 'Blog', 
-    to: '/iblog/c',
+    to: '/b',
   },
 ])
 </script>

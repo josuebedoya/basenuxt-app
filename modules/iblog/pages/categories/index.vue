@@ -15,25 +15,25 @@ const {data: apiPosts} = await useAsyncData('posts',
     () => $fetch(`/api/iblog/posts`)
 );
 const posts = ref([]);
-const postsData = await ref(apiPosts?.value || []);
 
-if (postsData.value.length > 0) {
-  posts.value = postsData.value.map((post: any) => {
-
+if (apiPosts.value.length > 0) {
+  posts.value = apiPosts.value.map((post: any) => {
     return {
       img: post.mediaFiles?.mainimage?.path,
       title: post.title,
       summary: post.summary,
       category: post.category,
-      url: post.url
+      url: '/p/' + post.category.slug + '/' + post.slug
     };
   });
 }
 
+console.log(posts)
+
 // Get active category
 const activeCategory = await getActiveCategory(categories.value);
-if (activeCategory) {
 
+if (activeCategory.length > 0) {
   posts.value = await getPosts.byCategory(activeCategory?.[0].id);
 }
 
@@ -48,11 +48,17 @@ if (activeCategory) {
     <div class="content tw-py-10">
       <div class="container">
 
-        <div class="top-section tw-pb-5">
-          <h2 class="tw-text-center tw-text-4xl tw-mb-4 tw-font-bold">Titulo</h2>
+        <div class="top-section tw-pb-5" v-if="activeCategory.length > 0">
+          <h2 class="tw-text-center tw-text-4xl tw-mb-4 tw-font-bold">{{ activeCategory[0].title }}</h2>
         </div>
 
-        <ItemPost :posts="posts"/>
+        <div class="=tems tw-grid tw-grid-cols-4 tw-gap-5">
+          <ItemPost
+              v-for="(post, index) in posts"
+              :key="index"
+              :post="post"
+          />
+        </div>
 
       </div>
     </div>

@@ -1,8 +1,7 @@
 <template>
-  <div class="items tw-grid tw-grid-cols-4 tw-gap-5">
+  <div>
     <q-card
         class="tw-col-span-1 tw-rounded-lg tw-cursor-pointer tw-shadow-lg"
-        v-for="post in posts"
         :key="post.id || post.title"
     >
 
@@ -34,14 +33,16 @@
 
       <q-card-section v-if="post.url"
                       class="tw-flex tw-justify-start tw-pb-2">
-        <q-btn
-            rounded
-            color="primary"
-            padding="3px 25px"
-            push
-            :label="t('iblog.posts.button')"
-            class="tw-font-semibold tw-text-sm tw-capitalize tw-mb-5"
-        />
+        <nuxt-link :to="post.url">
+          <q-btn
+              rounded
+              color="primary"
+              padding="3px 25px"
+              push
+              :label="t('iblog.posts.button')"
+              class="tw-font-semibold tw-text-sm tw-capitalize tw-mb-5"
+          />
+        </nuxt-link>
       </q-card-section>
 
     </q-card>
@@ -50,16 +51,16 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  posts: {
-    type: Array,
+  post: {
+    type: Object,
     required: true
   }
 })
 
 const posts = ref([]);
 
-if (props.posts && props.posts.length > 0) {
-  posts.value = props.posts;
+if (props.post && props.post.length > 0) {
+  post.value = props.post;
 }
 
 const {t} = useI18n({
