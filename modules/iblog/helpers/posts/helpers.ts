@@ -10,7 +10,7 @@ const getPosts = {
                 params: {
                     categoryId: id,
                     take: params?.take || 60,
-                    page: params?.page || 10,
+                    page: params?.page || 1,
                     ...params
                 }
             }
