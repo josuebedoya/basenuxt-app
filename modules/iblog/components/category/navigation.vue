@@ -1,8 +1,8 @@
 <template>
-  <nav class="nav">
+  <nav class="nav tw-w-full">
     <q-list
         dense
-        class="tw-flex tw-no-wrap tw-gap-2 tw-border-b tw-border-gray-300 tw-pb-2 tw-pt-4 overflow-x-auto"
+        class="tw-flex tw-no-wrap tw-gap-2 tw-border-b tw-border-gray-300 tw-pb-2 tw-pt-4 tw-overflow-x-auto tw-max-w-full tw-w-full"
     >
 
       <q-item

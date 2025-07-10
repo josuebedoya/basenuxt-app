@@ -28,8 +28,6 @@ if (apiPosts.value.length > 0) {
   });
 }
 
-console.log(posts)
-
 // Get active category
 const activeCategory = await getActiveCategory(categories.value);
 
